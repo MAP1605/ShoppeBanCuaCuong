@@ -1,0 +1,139 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6332, #f6402d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.header__navbar-item {
+    margin: 0 10px;
+    position: relative;
+    min-height: auto;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    /* cài lại font-size 1.6rem (để nếu quên) */
+    /* font-size: 1.6rem; */
+    color: var(--white-color);
+    /* 
+    text-decoration: none; (bỏ gạch chân cho link) 
+    */
+    text-decoration: none;
+    /* 
+    font-weight: ; (độ đậm của font)
+    */
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-block;
+    align-items: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+    /* 
+    cursor: pointer; (biến con trỏ thành hình bàn tay khi di chuyển vào link)
+    */
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-item--strong {
+    font-weight: 500;
+}
+
+.header__navbar-item--separate::after {
+    /* content: "|";
+    font-weight: 300;
+    display: inline-block;
+    color: #fa8e82;
+    margin-left: 10px;
+    margin-right: -10px; */
+
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #fa8e82;
+    height: 15px;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.6rem;
+    margin: 0 4px;
+}
+
+.header__navbar-item--has-qr:hover {
+    .header__qr {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+.header__navbar-title--no-poiter {
+    cursor: text;
+    color: var(--white-color);
+}
+
+.header__navbar-icon-link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Header QR code */
+
+.header__qr {
+    background-color: var(--white-color);
+    width: 140px;
+    /* height: 100px; */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-download-img {
+    height: 12px;
+}
+
+.header__qr-link:first-child {
+    margin-left: 8px;
+}
+
+.header__qr-link:nth-child(2) {
+    margin-right: 8px;
+}
